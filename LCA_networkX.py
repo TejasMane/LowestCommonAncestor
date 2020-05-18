@@ -45,13 +45,9 @@ def find_lowest_common_ancestor(name1, name2, G):
 
             if solutionID ==pair[1]:
                 solutionID = [i for i in G.predecessors(pair[1])][0]
-
-
         except:
             print("")
-
         break
-
 
     ancestor = list(df_name_to_id[df_name_to_id['taxID'] ==solutionID]['name'])
     
@@ -96,7 +92,6 @@ node2 = 'unclassified Herpetosiphonaceae'
 
 pid, ancestor = find_lowest_common_ancestor(node1, node2, G)
 print("Lowest common ancestor of node1 =", node1, " and node2 = ", node2      , " is a node with taxid = ", pid, "and the corresponding names can be = ", ancestor)
-
 
 
 ## Test Case 4
