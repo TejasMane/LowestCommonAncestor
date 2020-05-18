@@ -33,10 +33,6 @@ for i in range((np.max(np.array(df_name_to_id.iloc[:,1])))):
 for i in range(len(list(df_id_to_pid.iloc[:,1]))):
     NodeList[int(df_id_to_pid.iloc[i,0])-1].parent = NodeList[int(df_id_to_pid.iloc[i,1])-1]
 
-NodeList[0].data
-
-NodeList[0].parent.data
-
 def find_lowest_common_ancestor(name1, name2, N):
     
     
